@@ -58,11 +58,11 @@ A GitHub repository for the URI Computer Science 212 Class, Gradebook Review pro
 
 ## Code
 
-[main.cpp]()
+[main.cpp](main.cpp)
 
-[gradebook.cpp]()
+[gradebook.cpp](gradebook.cpp)
 
-[gradebook.h]()
+[gradebook.h](gradebook.h)
 
 ---
 ## Information from the Course Website
