@@ -18,6 +18,10 @@ class grade_Book {
         double getCategoryGrade(string assignment_type);
         double getCourseGrade(int option);
         //helper methods
+        double getWeightFromType(string assignment_type)
+        double getOnlyCategoryTotal(string assignment_type)
+        int getAssignmentIndex(string assignment_name)
+        //modifiers
         void changeAssignmentName(std::string p_assignment_name, string p_new_name);
         void changeAssignmentType(std::string p_assignment_name, string p_new_type);
         void changeAssignmentGrade(std::string p_assignment_name, int p_new_score);
