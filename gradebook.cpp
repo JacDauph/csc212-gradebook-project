@@ -9,6 +9,9 @@ grade_book(std::vector<int> score_obtainted,std::vector<std::string> type, std::
 double getIndividualGrade(string assignment_name);
 double getCategoryGrade(string assignment_type);
 double getCourseGrade(int option);
+
+double getOnlyCategoryTotal(string assignment_type)
+int getAssignmentIndex(string assignment_name)
       
 void changeAssignmentName(std::string p_assignment_name, string p_new_name);
 void changeAssignmentType(std::string p_assignment_name, string p_new_type);
