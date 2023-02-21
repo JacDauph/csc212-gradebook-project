@@ -10,6 +10,7 @@ double getIndividualGrade(string assignment_name);
 double getCategoryGrade(string assignment_type);
 double getCourseGrade(int option);
 
+double getWeightFromType(string assignment_type)
 double getOnlyCategoryTotal(string assignment_type);
 int getAssignmentIndex(string assignment_name);
       
