@@ -12,11 +12,26 @@ double getCourseGrade(int option);
 
 double getWeightFromType(std::string assignment_type);
 double getOnlyCategoryTotal(std::string assignment_type);
-int getAssignmentIndex(std::string assignment_name);
+int getAssignmentIndex(std::string assignment_name){
+    bool check;
+    for(int i = 0; i < this->assignment_name_list.size(); i ++){
+        if(assignment_name_list[i] == assignment_name){
+            check = true;
+            return i;
+        }
+
+    }
+    std::cout<< "Not Found" << "\n";
+    return false;
+}
       
 void changeAssignmentName(std::string p_assignment_name, string p_new_name);
 void changeAssignmentType(std::string p_assignment_name, string p_new_type);
-void changeAssignmentGrade(std::string p_assignment_name, int p_new_score);
+void changeAssignmentGrade(std::string p_assignment_name, int p_new_score){
+    int index = getAssignmentIndex(p_assignment_name);
+    this-> score_obtained.at(index) = p_new_score;
+
+}
 void changeAssignmentMaxGrade(std::string p_assignment_name, int p_new_max_score);
     
         
