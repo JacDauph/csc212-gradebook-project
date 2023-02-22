@@ -4,28 +4,35 @@
 #include <sstream>
 #include <cmath>
 #include <vector>
-#include "gradebook.h"
+
 
 int main(int argc, char*argv[]) {
+    std::string file_name = argv[1];
 
-    //read arguments
+    std::ifstream inFile(file_name);
 
-    //create vectors for each of the categories
+    std::string line;
 
-    //read an input file
-    //tokenize the file
-        //File
-          //Name
-          //Cat 1 grades
-          //Cat 2 grades
-          //Cat 3 grades
-          // Cat 4 grades
-          //Final Grade
+    std::vector<std::string> assignment_name;
+    std::vector<std::string> assignment_type;
+    std::vector<int> obtained_grade;
+    std::vector<int> max_score;
+
+    while(std::getline(inFile,line)){
+        std::stringstream ss(line);
+        int grade, score;
+        std::string name, type;
+
+        ss << line;
+        ss >> name >> type >> grade >> score;
+
+        assignment_name.push_back(name);
+        assignment_type.push_back(type);
+        obtained_grade.push_back(grade);
+        max_score.push_back(score);
 
 
-    //edit file
-
-
-    // option for copy file or revert?
+    }
+    
     return 0;
 }
