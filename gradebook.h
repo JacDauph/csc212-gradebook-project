@@ -26,22 +26,16 @@ class grade_Book {
         double getWeightFromType(std::string assignment_type);
         double getOnlyCategoryTotal(std::string assignment_type);
         int getAssignmentIndex(std::string assignment_name);
-        //modifiers
-        void changeAssignmentName(std::string p_assignment_name, std::string p_new_name);
-        void changeAssignmentType(std::string p_assignment_name, std::string p_new_type);
-        void changeAssignmentGrade(std::string p_assignment_name, int p_new_score);
-        void changeAssignmentMaxGrade(std::string p_assignment_name, int p_new_max_score);
-    
-        //method for changing file
-        void addNewGrade(std::string p_new_name, std::string p_new_type, int p_new_score, int p_new_max_score);
-    
-        //saves the changes made to file
+
+        //Modifiers
+        void changeAssignmentName(std::string original_name, std::string new_name);
+        void changeAssignmentType(std::string name, std::string new_type);
+        void changeAssignmentGrade(std::string name, int new_score);
+        void changeAssignmentMaxGrade(std::string name, int new_max);
+
+        void addNewGrade(std::string new_name, std::string new_type, int new_score, int new_max);
+
         void saveChanges();
-
-        
-
-
-
 };
 
 
