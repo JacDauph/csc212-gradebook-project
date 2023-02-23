@@ -4,6 +4,7 @@
 #include <sstream>
 #include <cmath>
 #include <vector>
+#include "gradebook.h"
 
 
 int main(int argc, char*argv[]) {
