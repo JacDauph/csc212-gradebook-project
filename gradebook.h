@@ -10,9 +10,9 @@ class grade_Book {
 
     public:
         //default constructor/constructor with vector as data
-        grade_book();
+        grade_Book();
         //contructor with all vectors
-        grade_book(std::vector<int> score_obtainted,std::vector<std::string> type, std::vector<std::string> max_score);
+        grade_Book(std::vector<int> score_obtainted,std::vector<std::string> type, std::vector<std::string> max_score);
         //Getter methods
         double getIndividualGrade(std::string assignment_name);
         double getCategoryGrade(std::string assignment_type);

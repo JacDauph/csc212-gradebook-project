@@ -19,6 +19,7 @@ int main(int argc, char*argv[]) {
     std::vector<int> max_score;
 
     while(std::getline(inFile,line)){
+        //std::cout << line << std::endl; working
         std::stringstream ss(line);
         int grade, score;
         std::string name, type;
