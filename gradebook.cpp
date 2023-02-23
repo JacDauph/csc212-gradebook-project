@@ -12,19 +12,59 @@ double grade_Book::getCategoryGrade(std::string assignment_type){return 0.0;}
 double grade_Book::getCourseGrade(int option){return 0.0;}
 
 
-double grade_Book::getWeightFromType(std::string assignment_type){return 0.0;}
-double grade_Book::getOnlyCategoryTotal(std::string assignment_type){return 0.0;}
+double grade_Book::getWeightFromType(std::string assignment_type){ 
+       if (assignment_type == "lab"){
+            return 0.2;
+
+        }
+        else if(assignment_type == "homework"){
+            return 0.2;
+        }
+        else if(assignment_type == "Review Project"){
+            return 0.15;
+        }
+        else if(assignment_type == "Final Project"){
+            return 0.35;
+        }
+        else if(assignment_type == "Final Exam"){
+            return 0.1;
+        }
+        else{
+            std::cout << "Type not available" << "\n";
+             return 0.0;
+        }
+      }
+
+double grade_Book::getOnlyCategoryTotal(std::string assignment_type){
+       
+    std::vector <int> temp_indexes;
+    for(int i = 0; i< this->type.size(); i++){
+        if(this->type[i] == assignment_type ){
+            temp_indexes.push_back(i);
+        }
+    }
+    double add_nums;
+    for(int j =0; j< temp_indexes.size(); j++){
+        add_nums+= this->score_obtained[temp_indexes[j]];
+
+    }
+    add_nums = add_nums/ temp_indexes.size();
+    double weight = getWeightFromType(assignment_type);
+    double cat_total =  add_nums*weight;
+    return cat_total;
+}
+
 int grade_Book::getAssignmentIndex(std::string assignment_name){
-    bool check;
+    
     for(int i = 0; i < this->assignment_name_list.size(); i ++){
         if(assignment_name_list[i] == assignment_name){
-            check = true;
+            
             return i;
         }
 
     }
     std::cout<< "Not Found" << "\n";
-    return false;
+    return -1;
 }
       
 /*
