@@ -4,17 +4,29 @@
 #include "gradebook.h"
 
 grade_Book::grade_Book(){}
-       
-grade_Book::grade_Book(std::vector<int> score_obtainted,std::vector<std::string> type, std::vector<int> max_score){}
-       
-double grade_Book::getIndividualGrade(std::string assignment_name){}
-double grade_Book::getCategoryGrade(std::string assignment_type){}
-double grade_Book::getCourseGrade(int option){}
 
-double grade_Book::getWeightFromType(std::string assignment_type){}
-double grade_Book::getOnlyCategoryTotal(std::string assignment_type){}
-int grade_Book::getAssignmentIndex(std::string assignment_name){}
+grade_Book::grade_Book(std::vector<std::string> assignment_name_list, std::vector<std::string> type, std::vector<int> score_obtained, std::vector<int> max_score){}
+       
+double grade_Book::getIndividualGrade(std::string assignment_name){return 0.0;}
+double grade_Book::getCategoryGrade(std::string assignment_type){return 0.0;}
+double grade_Book::getCourseGrade(int option){return 0.0;}
 
+
+double grade_Book::getWeightFromType(std::string assignment_type){return 0.0;}
+double grade_Book::getOnlyCategoryTotal(std::string assignment_type){return 0.0;}
+int grade_Book::getAssignmentIndex(std::string assignment_name){
+    bool check;
+    for(int i = 0; i < this->assignment_name_list.size(); i ++){
+        if(assignment_name_list[i] == assignment_name){
+            check = true;
+            return i;
+        }
+
+    }
+    std::cout<< "Not Found" << "\n";
+    return false;
+}
+      
 /*
 This method will change the original assignment name to a user specified assignment name
 */
