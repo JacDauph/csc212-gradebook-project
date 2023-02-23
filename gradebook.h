@@ -7,7 +7,6 @@
 class grade_Book {
     private:
         std::string file_name;
-
         std::vector<std::string> assignment_name_list;
         std::vector<int> score_obtainted;
         std::vector<std::string> type;
@@ -17,7 +16,7 @@ class grade_Book {
         //default constructor/constructor with vector as data
         grade_Book();
         //contructor with all vectors
-        grade_Book(std::vector<std::string> assignment_name_list, std::vector<std::string> type, std::vector<int> score_obtained, std::vector<int> max_score)
+        grade_Book(std::vector<std::string> assignment_name_list, std::vector<std::string> type, std::vector<int> score_obtained, std::vector<int> max_score);
 
         //Getter methods
         double getIndividualGrade(std::string assignment_name);
