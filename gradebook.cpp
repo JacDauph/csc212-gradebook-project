@@ -1,11 +1,15 @@
-
 #include <iostream>
 #include <fstream>
 #include "gradebook.h"
 
-grade_Book::grade_Book(){}
+GradeBook::GradeBook(std::string file_name, std::vector<std::string> names, std::vector<std::string> types, std::vector<int> scores, std::vector<int> max_scores){
+    this->file_name = file_name;
+    this->names = names;
+    this->types = types;
+    this->scores = scores;
+    this->max_scores = max_scores;
 
-grade_Book::grade_Book(std::vector<std::string> assignment_name_list, std::vector<std::string> type, std::vector<int> score_obtained, std::vector<int> max_score){}
+}
        
 double GradeBook::getIndividualGrade(std::string name){
     // Gets the index of the specified assignment name
