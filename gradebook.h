@@ -4,9 +4,10 @@
 class grade_Book {
     private:
         std::string file_name;
+        std::vector<std::string> assignment_names;
         std::vector<int> score_obtainted;
         std::vector<std::string> type;
-        std::vector<std::string> max_score; 
+        std::vector<int> max_score;
 
     public:
         //default constructor/constructor with vector as data
@@ -16,7 +17,7 @@ class grade_Book {
         //Getter methods
         double getIndividualGrade(std::string assignment_name);
         double getCategoryGrade(std::string assignment_type);
-        double getCourseGrade(int option);
+        double getCourseGrade();
         //helper methods
         double getWeightFromType(std::string assignment_type);
         double getOnlyCategoryTotal(std::string assignment_type);
