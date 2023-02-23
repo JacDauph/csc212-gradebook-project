@@ -64,61 +64,67 @@ double grade_Book::getCourseGrade(){
 }
 
 
-double grade_Book::getWeightFromType(std::string assignment_type){ 
-       if (assignment_type == "lab"){
-            return 0.2;
+double GradeBook::getIndividualNoPrint(std::string name){
+    // Gets the index of the specified assignment name
+    int idx = getAssignmentIndex(name);
+    double output;
 
-        }
-        else if(assignment_type == "homework"){
-            return 0.2;
-        }
-        else if(assignment_type == "Review Project"){
-            return 0.15;
-        }
-        else if(assignment_type == "Final Project"){
-            return 0.35;
-        }
-        else if(assignment_type == "Final Exam"){
-            return 0.1;
-        }
-        else{
-            std::cout << "Type not available" << "\n";
-             return 0.0;
-        }
-      }
+    // If the name is in the this->names list, else run an error message and return
+    if(idx != -1){
 
-double grade_Book::getOnlyCategoryTotal(std::string assignment_type){
-       
-    std::vector <int> temp_indexes;
-    for(int i = 0; i< this->type.size(); i++){
-        if(this->type[i] == assignment_type ){
-            temp_indexes.push_back(i);
-        }
+        // Set the output to the score you got over the max score possible
+        // The 1.0 numbers are for escaping integer division and the *100 makes it so the result is not a decimal
+        output = (this->scores[idx]*1.0) / (this->max_scores[idx]*1.0)*100;
+    }else{
+
+        // Case for if the option entered was invalid
+        std::cout << "Error: Assignment name not in gradebook" << std::endl;
+        return 0;
     }
-    double add_nums;
-    for(int j =0; j< temp_indexes.size(); j++){
-        add_nums+= this->score_obtained[temp_indexes[j]];
 
-    }
-    add_nums = add_nums/ temp_indexes.size();
-    double weight = getWeightFromType(assignment_type);
-    double cat_total =  add_nums*weight;
-    return cat_total;
+    return output;
 }
+double GradeBook::getCategoryNoPrint(std::string type){
+    double output;
 
-int grade_Book::getAssignmentIndex(std::string assignment_name){
-    
-    for(int i = 0; i < this->assignment_name_list.size(); i ++){
-        if(assignment_name_list[i] == assignment_name){
-            
+    // If the type is in the this->types list, else run an error message and return
+    if (std::find(this->types.begin(), this->types.end(), type) != this->types.end()){
+        // Counter is used for averaging the grade for the course
+        int counter = 0;
+
+        // For the number of types in this->types, check if the user specified type matches
+        // If so, run getIndividualGrade with the name in that index and add one to the counter
+        for(int i = 0; i < this->types.size(); i++){
+            if(this->types[i] == type){
+                output += getIndividualNoPrint(this->names[i]);
+                counter++;
+            }
+        }
+
+        // Divide the output by the counter, averaging the category grade
+        output /= counter;
+
+    }else{
+
+        // Case for if the option entered was invalid
+        std::cout << "Error: Type not in gradebook" << std::endl;
+        return 0;
+    }
+
+    return output;
+}
+int GradeBook::getAssignmentIndex(std::string name){
+
+    // For every name in this->names, check to see if it matches the user specified name
+    // If it does, return the index, else return -1
+    for(int i = 0; i < this->names.size(); i++){
+        if(names[i] == name){
             return i;
         }
-
     }
-    std::cout<< "Not Found" << "\n";
-    return -1;
+
+    return -1; // Assignment name is not in list
 }
-      
 
 /*
 This method will change the original assignment name to a user specified assignment name
