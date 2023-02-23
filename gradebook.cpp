@@ -198,69 +198,55 @@ int GradeBook::getAssignmentIndex(std::string name){
     return -1; // Assignment name is not in list
 }
 
-/*
-This method will change the original assignment name to a user specified assignment name
-*/
-void grade_Book::changeAssignmentName(std::string p_assignment_name, std::string p_new_name){
+// Modifiers
+void GradeBook::changeAssignmentName(std::string original_name, std::string new_name){
+    // Retrieves the index of the name provided by the user
+    int index = getAssignmentIndex(original_name);
 
-    int index = getAssignmentIndex(p_assignment_name);
-    this->assignment_name_list.at(index) = p_new_name;
+    // Sets that element at the index retrieved above to the new name inserted by the user
+    this->names.at(index) = new_name;
+}
+void GradeBook::changeAssignmentType(std::string name, std::string new_type){
+    // Retrieves the index of the name provided by the user
+    int index = getAssignmentIndex(name);
 
+    // Sets that element at the index retrieved above to the new type inserted by the user
+    this->types.at(index) = new_type;
+}
+void GradeBook::changeAssignmentGrade(std::string name, int new_score){
+
+    // Retrieves the index of the name provided by the user
+    int index = getAssignmentIndex(name);
+
+    // Sets that element at the index retrieved above to the new score inserted by the user
+    this->scores.at(index) = new_score;
 }
 
-/*
-This method will change the original assignment type to a user specified type
-*/
-void grade_Book::changeAssignmentType(std::string p_assignment_name, std::string p_new_type){
+void GradeBook::changeAssignmentMaxGrade(std::string name, int new_max){
 
-    int index = getAssignmentIndex(p_assignment_name);
-    this->type.at(index) = p_new_type;
+    // Retrieves the index of the name provided by the user
+    int index = getAssignmentIndex(name);
 
+    // Sets that element at the index retrieved above to the new score inserted by the user
+    this->max_scores.at(index) = new_max;
 }
 
-/*
-This method will change the original assignment score to a user specified score
-*/
-void grade_Book::changeAssignmentGrade(std::string p_assignment_name, int p_new_score){
-
-    int index = getAssignmentIndex(p_assignment_name);
-    this->score_obtained.at(index) = p_new_score;
-
+void GradeBook::addNewGrade(std::string new_name, std::string new_type, int new_score, int new_max){
+    // Pushes the inserted (by user) information into the respected vectors
+    this->names.push_back(new_name);
+    this->types.push_back(new_type);
+    this->scores.push_back(new_score);
+    this->max_scores.push_back(new_max);
 }
 
-/*
-This method will change the original assignment max score to a user specified max score
-*/
-void grade_Book::changeAssignmentMaxGrade(std::string p_assignment_name, int p_new_max_score){
-
-    int index = getAssignmentIndex(p_assignment_name);
-    this->max_score.at(index) = p_new_max_score;
-
-}
-
-/*
-This method will append new information based on user input for each member vector
-*/
-void grade_Book::addNewGrade(std::string p_new_name, std::string p_new_type, int p_new_score, int p_new_max_score){
-
-    this->assignment_name_list.push_back(p_new_name);
-    this->type.push_back(p_new_type);
-    this->score_obtained.push_back(p_new_score);
-    this->max_score.push_back(p_new_max_score);
-
-}
-
-/*
-This method creates a file of the same name as the input file and writes the new updated information if applicable
-*/
-void grade_Book::saveChanges(){
-
+void GradeBook::saveChanges(){
     std::ofstream updatedFile(this->file_name);
 
-    for(int i = 0; i < this->type.size(); i++){
-        updatedFile << this->assignment_name_list.at(i) << ' ' << this->type.at(i) << ' ' << this->score_obtained.at(i) << ' ' << this->max_score.at(i) << std::endl;
+    for(int i = 0; i < this->types.size(); i++){
+        // This line will append a new line to the file, the line contains the new appended grade that was added
+        // in the addNewGrade method
+        updatedFile << this->names.at(i) << ' ' << this->types.at(i) << ' ' << this->scores.at(i) << ' ' << this->max_scores.at(i) << std::endl;
     }
 
     updatedFile.close();
-
 }
