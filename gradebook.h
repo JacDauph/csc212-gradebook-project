@@ -4,13 +4,13 @@
 
 #pragma once
 
-class grade_Book {
+class GradeBook {
     private:
         std::string file_name;
         std::vector<std::string> names;
         std::vector<int> scores;
-        std::vector<std::string> type;
-        std::vector<int> max_score;
+        std::vector<std::string> types;
+        std::vector<int> max_scores;
 
     public:
 

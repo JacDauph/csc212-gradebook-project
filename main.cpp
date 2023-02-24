@@ -14,10 +14,12 @@ int main(int argc, char*argv[]) {
 
     std::string line;
 
-    std::vector<std::string> assignment_name;
-    std::vector<std::string> assignment_type;
-    std::vector<int> obtained_grade;
-    std::vector<int> max_score;
+    std::vector<std::string> names;
+    std::vector<std::string> types;
+    std::vector<int> scores;
+    std::vector<int> max_scores;
+
+    GradeBook* grade_book = new GradeBook(file_name, names, types, scores, max_scores);
 
     while(std::getline(inFile,line)){
         std::cout << line << std::endl;
@@ -28,15 +30,14 @@ int main(int argc, char*argv[]) {
         ss << line;
         ss >> name >> type >> grade >> score;
 
-        assignment_name.push_back(name);
-        assignment_type.push_back(type);
-        obtained_grade.push_back(grade);
-        max_score.push_back(score);
+        names.push_back(name);
+        types.push_back(type);
+        scores.push_back(grade);
+        max_scores.push_back(score);
 
 
     }
     
-    grade_book = new GradeBook(file_name, names, types, scores, max_scores);
 
     int choice;
 

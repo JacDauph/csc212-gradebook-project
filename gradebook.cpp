@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 #include "gradebook.h"
 
 GradeBook::GradeBook(std::string file_name, std::vector<std::string> names, std::vector<std::string> types, std::vector<int> scores, std::vector<int> max_scores){
