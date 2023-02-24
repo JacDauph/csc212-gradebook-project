@@ -19,28 +19,29 @@ int main(int argc, char*argv[]) {
     std::vector<int> scores;
     std::vector<int> max_scores;
 
-    GradeBook* grade_book = new GradeBook(file_name, names, types, scores, max_scores);
+    GradeBook* grade_book; 
 
     while(std::getline(inFile,line)){
-        std::cout << line << std::endl;
+        //std::cout << line << std::endl;
         std::stringstream ss(line);
-        int grade, score;
+        int score, max_score;
         std::string name, type;
 
         ss << line;
-        ss >> name >> type >> grade >> score;
+        ss >> name >> type >> score >> max_score;
 
         names.push_back(name);
         types.push_back(type);
-        scores.push_back(grade);
-        max_scores.push_back(score);
+        scores.push_back(score);
+        max_scores.push_back(max_score);
 
 
     }
     
+    grade_book = new GradeBook(file_name, names, types, scores, max_scores);
 
     int choice;
-
+    //std::cout << "HELLO" << std::endl;
     do{
         std::cout << "Please insert a number, based on the options below:" << std::endl;
         std::cout << "1 - Get individual grade" << "\n"
@@ -52,6 +53,7 @@ int main(int argc, char*argv[]) {
                 "7 - Modify assigment max grade in file" << "\n"
                 "8 - Add a new grade to file" << "\n"
                 "9 - Save changes to file" << "\n"
+                "10 - Print all assingment names and types" << "\n"
                 "0 - Exit Program" << std::endl;
         std::cout << std::endl;
         std::cin >> choice;
@@ -174,7 +176,12 @@ int main(int argc, char*argv[]) {
                     std::cout << "Error: Invalid option" << std::endl;
                 }
 
-            break;
+                break;
+            case 10:
+
+                grade_book->printAllAssignments();
+
+                break;
             case 0:
                 break;
             default:
@@ -182,10 +189,7 @@ int main(int argc, char*argv[]) {
                 std::cout << std::endl;
                 std::cout << "--------------------------------------------------------" << std::endl;
                 break;
-
-
         }
-
 
     }while(choice != 0);
 
