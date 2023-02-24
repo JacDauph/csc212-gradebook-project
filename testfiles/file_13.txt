@@ -4,7 +4,7 @@ lab1 lab 7 10
 lab4 lab 9 10
 assignment2 assignment 11 20
 exam2 exam 62 100
-assignment5 assignment
+assignment5 assignment 5 20
 exam1 exam 76 100
 lab2 lab 10 10
 exam5 exam 100 100
