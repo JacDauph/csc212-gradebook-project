@@ -1,0 +1,15 @@
+exam4 exam 81 100
+assignment1 assignment 14 20
+lab1 lab 7 10
+lab4 lab 9 10
+assignment2 assignment 11 20
+exam2 exam 62 100
+assignment5 assignment
+exam1 exam 76 100
+lab2 lab 10 10
+exam5 exam 100 100
+lab3 lab 5 10
+assignment4 assignment 14 20
+lab5 lab 9 10
+exam3 exam 78 100
+assignment3 assignment 20 20
