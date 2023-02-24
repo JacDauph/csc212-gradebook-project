@@ -22,15 +22,13 @@ class GradeBook {
         double getCategoryGrade(std::string type);
         double getCourseGrade(int option);
 
+
         // Helper methods
         double getIndividualNoPrint(std::string name);
         double getCategoryNoPrint(std::string type);
         int getAssignmentIndex(std::string name);
 
-        // Assignment visualizer
-        void printAllAssignments();
-
-        // Modifiers
+        //Modifiers
         void changeAssignmentName(std::string original_name, std::string new_name);
         void changeAssignmentType(std::string name, std::string new_type);
         void changeAssignmentGrade(std::string name, int new_score);
