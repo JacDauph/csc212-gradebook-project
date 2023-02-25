@@ -47,7 +47,9 @@ Once the program has run, it will ask "Please insert a number, based on the opti
 
 ### The inputs of each option are case sensitive to the dataset for a .txt file
 
-##### Entering a 1, will allow the user to get a specific grade of any assignment, lab, project, or final exam.
+<br>
+
+### Entering a 1, will allow the user to get a specific grade of any assignment, lab, project, or final exam.
 
 * However, entering an input not within the text file will result in a message that says:
 
@@ -56,7 +58,7 @@ Once the program has run, it will ask "Please insert a number, based on the opti
 
 <br>
 
-##### Entering a 2, will allow the user to search for a category grade.
+### Entering a 2, will allow the user to search for a category grade.
 In which it will output all of the assignments in that category, their grades, and the category grade.
 
 
@@ -68,7 +70,7 @@ Grade:
 
 <br>
 
-##### Entering a 3, will give an output to the course grade, which includes 3 different options.
+#### Entering a 3, will give an output to the course grade, which includes 3 different options.
 
 *The first option is all the grades in the respective categories, the category grades, and the course overall grade.
 
@@ -85,13 +87,13 @@ Grade:
 
 <br>
 
-##### Entering a 4, will the user to change the name of an assignment name
+#### Entering a 4, will the user to change the name of an assignment name
 
 *This is done by entering the original assignment name first and a whitespace between the new desired name to replace the original name.
 
 <br>
 
-##### Entering a 5, will the user to change the name of a specific assignment to a different category type
+#### Entering a 5, will the user to change the name of a specific assignment to a different category type
 
 
 *This is done by entering the assignment name first and a whitespace between the new category to place the assignment in.
@@ -100,21 +102,21 @@ Grade:
 
 
 
-##### Entering a 6, will the user to change the grade of a specific assignment
+#### Entering a 6, will the user to change the grade of a specific assignment
 
 
 *This is done by entering the assignment name first and a whitespace between the grade to give the assignment
 
 <br>
 
-##### Entering a 7, will the user to change the max score grade of a specific assignment
+#### Entering a 7, will the user to change the max score grade of a specific assignment
 
 
 *This is done by entering the assignment name first and a whitespace between the max score grade to give the assignment
 
 <br>
 
-##### Entering a 8, allows the user to add an entire new assignment with a category, grade obtained, and a max grade.
+#### Entering a 8, allows the user to add an entire new assignment with a category, grade obtained, and a max grade.
 
 
 *This is done by entering the new assignment name, category, grade obtained, and max grade.
@@ -123,8 +125,8 @@ Grade:
 
 <br>
 
-##### Entering a 9 will save all changes desired from inputs to the original file
+#### Entering a 9 will save all changes desired from inputs to the original file
 
 <br>
 
-#### Entering a 0 will completely exit out the program, leaving any progress not saved from input 9 to be gone.
+### Entering a 0 will completely exit out the program, leaving any progress not saved from input 9 to be gone.
