@@ -57,7 +57,7 @@ Once the program has run, it will ask "Please insert a number, based on the opti
 <br>
 
 ##### Entering a 2, will allow the user to search for a category grade.
-In which it will out put all of the assignments in that category, their grades, and the category grade.
+In which it will output all of the assignments in that category, their grades, and the category grade.
 
 
 --------------------------------------------------------
@@ -81,7 +81,7 @@ Grade:
 
 <br>
 
-### Options 4 to 8 are changes done directly to the file, but will not be saved unless option 9 for saving changes is inputed by the user
+### Options 4 to 8 are changes done directly to the file, but will not be saved unless option 9 for saving changes is inputted by the user
 
 <br>
 
