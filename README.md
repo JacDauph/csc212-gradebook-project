@@ -42,11 +42,11 @@ A GitHub repository for the URI Computer Science 212 Class, Gradebook Review pro
 
 [Link to program summary](project_summary.md)
 
-[Link to pseudocode markdown file]()
+[Link to pseudocode markdown file](proof_of_concepts.md)
 
-[Link to compilation instructions]()
+[Link to compilation instructions](Compilation_time_instructions.md)
 
-[Link to runtime instructions]()
+[Link to runtime instructions](Runtime\ instructions.md)
 
 [Link to screenshots of input/output with some explanation]()
 
