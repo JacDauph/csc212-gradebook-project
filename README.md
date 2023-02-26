@@ -46,7 +46,7 @@ A GitHub repository for the URI Computer Science 212 Class, Gradebook Review pro
 
 [Link to compilation instructions](Compilation_time_instructions.md)
 
-[Link to runtime instructions](Runtime\ instructions.md)
+[Link to runtime instructions](Runtime&#32;instructions.md)
 
 [Link to screenshots of input/output with some explanation]()
 
