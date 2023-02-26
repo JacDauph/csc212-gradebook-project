@@ -1,47 +1,5 @@
 # Runtime Instructions:
-```mermaid
-flowchart TB
-    subgraph Start
-    start(Please insert a number, based on the options below:)-->a1(1 - Get individual grade)
-    start(Please insert a number, based on the options below:)--> a2(2 - Get category grade)
-    start(Please insert a number, based on the options below:)--> a3(3 - Get course grade)
-    
-    start(Please insert a number, based on the options below:)--> a4(4 - Modify assignment name)
-    
-    start(Please insert a number, based on the options below:)--> a5(5 - Modify type name in file)
-    
-    start(Please insert a number, based on the options below:)--> a7(7 - Modify assigment max grade in file)
-    
-    start(Please insert a number, based on the options below:)--> a8(8 - Add a new grade to file)
-    
-    
-    start(Please insert a number, based on the options below:)--> a9(9 - Save changes to file)
-    
-    
-    end
-   
-  
-    
-    a1(1 - Get individual grade) ---> individual(Please enter the name of the assignmemt)
-    
-    a2(2 - Get category grade) --> cat(Please enter the category.)
-    
-    a3 --> course(Please select from the available options)
-    
-    
-    course --> all(1 - All grades within their respective categories and a course overall)
-    
-    course --> cat_course(2 - Only category totals and course overall)
 
-    course --> course_only(3 - Only the course overall)
-
-    
-    
-
-
-
-
-```
 
 Once the program has run, it will ask "Please insert a number, based on the options below:", in which 10 different options are given.
 
