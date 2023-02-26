@@ -8,6 +8,7 @@
 
 
 int main(int argc, char*argv[]) {
+    // Makes the file name the first argument in the command prompt that runs the program
     std::string file_name = argv[1];
 
     std::ifstream inFile(file_name);
@@ -18,7 +19,8 @@ int main(int argc, char*argv[]) {
     std::vector<std::string> types;
     std::vector<int> scores;
     std::vector<int> max_scores;
-
+    
+    // Initializes user made type as the created class 
     GradeBook* grade_book = new GradeBook(file_name, names, types, scores, max_scores);
 
     while(std::getline(inFile,line)){
@@ -26,7 +28,7 @@ int main(int argc, char*argv[]) {
         std::stringstream ss(line);
         int grade, score;
         std::string name, type;
-
+        // Line is entered into the string stream, and is returned out as 4 separate token variables
         ss << line;
         ss >> name >> type >> grade >> score;
 
@@ -40,7 +42,9 @@ int main(int argc, char*argv[]) {
     
 
     int choice;
-
+    // This do while is what keeps the programming running until a specific input.
+    // A do while loop was used because we wanted to keep the programming running after a request was finished
+    // This allows the user to use the program as many times as they want without rerunning
     do{
         std::cout << "Please insert a number, based on the options below:" << std::endl;
         std::cout << "1 - Get individual grade" << "\n"
@@ -57,9 +61,13 @@ int main(int argc, char*argv[]) {
         std::cin >> choice;
         std::cout << std::endl;
 
+        // Variables for switch statement
         std::string name, type, original_name, new_name, new_type, decision, decision2;
         int option, new_score, new_max;
-
+        
+        // A switch statement is used so the choice variable can be interpreted based on user input
+        // We used a switch statement so we can accurately fulfill the request by having the choices represent the cases inside of the switch statement
+        // Each choice is a specific case that will run when the user selects the specific case
         switch(choice){
 
 
@@ -189,7 +197,7 @@ int main(int argc, char*argv[]) {
 
     }while(choice != 0);
 
-
+    //Since the grade_book is made dynamically it needs to be deleted before the program ends
     delete grade_book;
     
     return 0;
