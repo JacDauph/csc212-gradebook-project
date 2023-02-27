@@ -10,6 +10,7 @@ When compiled (following the compilation instructions) and run (following the ru
 
 The program also allows further modification of the text file, allowing for the addition of new assignments to the file, as well as complete modification of the name, type, score, and max score of the assignment specified.
 
+You can also view a list of all assignments and their respective types in order of entries in the input file.
 
 ## Brief Code Explanation
 
@@ -35,6 +36,8 @@ The program also allows further modification of the text file, allowing for the 
 `getCategoryNoPrint` - Returns the type/category grade. Does not print anything.
 
 `getAssignmentIndex` - Returns the index of a specified assignment name. If the name does not exist, return -1.
+
+`printAllAssignments` - Prints out all assignment names and their respective types.
 
 `changeAssignmentName` - Changes the name of a specified assignment.
 

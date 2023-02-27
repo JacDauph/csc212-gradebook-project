@@ -55,6 +55,7 @@ int main(int argc, char*argv[]) {
                 "7 - Modify assigment max grade in file" << "\n"
                 "8 - Add a new grade to file" << "\n"
                 "9 - Save changes to file" << "\n"
+                "10 - Print all assignments (name and type)" << "\n"
                 "0 - Exit Program" << std::endl;
         std::cout << std::endl;
         std::cin >> choice;
@@ -181,7 +182,10 @@ int main(int argc, char*argv[]) {
                     std::cout << "Error: Invalid option" << std::endl;
                 }
 
-            break;
+                break;
+            case 10:
+                grade_book->printAllAssignments();
+                break;
             case 0:
                 break;
             default:
