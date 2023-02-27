@@ -16,7 +16,7 @@
 1. Open up your IDE
 2. Create a new Project
 3. Add all the files to your program
-4.  In side the terminal enter: *g++ main.cpp gradebook.cpp -o prog* 
+4.  Inside the terminal enter: *g++ main.cpp gradebook.cpp -o prog* 
 5.  After : *./prog grades.txt*
 6.  Or: *g++ main.cpp gradebook.cpp -o prog && ./prog grades.txt*
 
