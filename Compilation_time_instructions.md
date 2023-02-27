@@ -20,6 +20,11 @@
 5.  After : *./prog grades.txt*
 6.  Or: *g++ main.cpp gradebook.cpp -o prog && ./prog grades.txt*
 
+1. * Or: *g++ -std=c++11 main.cpp gradebook.cpp -o prog*
+2. *./prog grades.txt*
+
+### "grades" can be substituted with the name of the file for testing.
+
 
 
 
