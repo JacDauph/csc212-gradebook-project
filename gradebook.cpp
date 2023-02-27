@@ -203,6 +203,15 @@ int GradeBook::getAssignmentIndex(std::string name){
     return -1; // Assignment name is not in list
 }
 
+// Printers
+void GradeBook::printAllAssignments(){
+    for(int i = 0; i < this->names.size(); i++){
+        std::cout << "Name: " << this->names[i] <<
+                     "\nType: " << this->types[i] << std::endl << std::endl;
+    }
+    std::cout << "--------------------------------------------------------" << std::endl;
+}
+
 // Modifiers
 void GradeBook::changeAssignmentName(std::string original_name, std::string new_name){
     // Retrieves the index of the name provided by the user

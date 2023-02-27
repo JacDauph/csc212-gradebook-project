@@ -28,6 +28,9 @@ class GradeBook {
         double getCategoryNoPrint(std::string type);
         int getAssignmentIndex(std::string name);
 
+        // Prints
+        void printAllAssignments();
+
         //Modifiers
         void changeAssignmentName(std::string original_name, std::string new_name);
         void changeAssignmentType(std::string name, std::string new_type);
