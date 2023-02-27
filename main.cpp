@@ -19,9 +19,6 @@ int main(int argc, char*argv[]) {
     std::vector<std::string> types;
     std::vector<int> scores;
     std::vector<int> max_scores;
-    
-    // Initializes user made type as the created class 
-    GradeBook* grade_book = new GradeBook(file_name, names, types, scores, max_scores);
 
     while(std::getline(inFile,line)){
         std::cout << line << std::endl;
@@ -40,6 +37,8 @@ int main(int argc, char*argv[]) {
 
     }
     
+    // Initializes user made type as the created class 
+    GradeBook* grade_book = new GradeBook(file_name, names, types, scores, max_scores);
 
     int choice;
     // This do while is what keeps the programming running until a specific input.
