@@ -37,7 +37,7 @@ double GradeBook::getIndividualGrade(std::string name){
 }
 
 double GradeBook::getCategoryGrade(std::string type){
-    double output;
+    double output = 0;
 
     // If the type is in the this->types list, else run an error message and return
     if (std::find(this->types.begin(), this->types.end(), type) != this->types.end()){
@@ -74,7 +74,7 @@ double GradeBook::getCategoryGrade(std::string type){
 //only category totals and course overall
 //only the course overall
 double GradeBook::getCourseGrade(int option){
-    double output, assign, proj, lab, exam;
+    double output, assign, proj, lab, exam = 0;
 
     switch(option){
         case 1: // All grades within their respective categories and a course overall
@@ -144,7 +144,7 @@ double GradeBook::getCourseGrade(int option){
 double GradeBook::getIndividualNoPrint(std::string name){
     // Gets the index of the specified assignment name
     int idx = getAssignmentIndex(name);
-    double output;
+    double output = 0;
 
     // If the name is in the this->names list, else run an error message and return
     if(idx != -1){
@@ -162,7 +162,7 @@ double GradeBook::getIndividualNoPrint(std::string name){
     return output;
 }
 double GradeBook::getCategoryNoPrint(std::string type){
-    double output;
+    double output= 0;
 
     // If the type is in the this->types list, else run an error message and return
     if (std::find(this->types.begin(), this->types.end(), type) != this->types.end()){
