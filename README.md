@@ -48,11 +48,9 @@ A GitHub repository for the URI Computer Science 212 Class, Gradebook Review pro
 
 [Link to runtime instructions](Runtime&#32;instructions.md)
 
-[Link to screenshots of input/output with some explanation]()
-
 ## Walkthrough
 
-[Link to recorded walkthrough]()
+[Link to recorded walkthrough](https://youtu.be/FB0ivSUWudc)
 
 [Link to mock datasets](testfiles)
 
