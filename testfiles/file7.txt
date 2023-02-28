@@ -1,7 +1,0 @@
-lab2 lab 9 10
-exam2 exam 81 100
-lab1 lab 5 10
-assignment1 assignment 5 20
-exam3 exam 89 100
-lab3 lab 5 10
-assignment2 assignment 13 20
