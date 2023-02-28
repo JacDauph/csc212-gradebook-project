@@ -1,6 +1,7 @@
 lab3 lab 2 10
 assignment1 assignment 15 20
 exam4 exam 85 100
+project2 project 10 20
 lab4 lab 10 10
 assignment2 assignment 10 20
 lab2 lab 3 10
@@ -8,6 +9,7 @@ exam3 exam 85 100
 assignment3 assignment 15 20
 exam1 exam 70 100
 exam5 exam 59 100
+project1 project 100 175
 lab1 lab 6 10
 assignment5 assignment 5 20
 exam2 exam 86 100
